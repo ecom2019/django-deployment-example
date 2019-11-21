@@ -1,0 +1,304 @@
+
+.top_info{
+    background-color: #203554;
+    color: white;
+    font-size: .9em;
+}
+.top_info p {
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+}
+.top_info img {
+  margin-right: .5rem;
+  margin-left: 1rem;
+}
+.top_info .fa {
+  font-size: 1.2rem;
+}
+.pcSearchBtn .fa{
+  font-size: .8rem;
+}
+.navbar .nav-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 1em !important;
+  padding-right: 1em !important; }
+
+.navbar .nav-item.active {
+  border-left: #444 3px solid; 
+}
+.bg-inverse {
+  color: #292b2c !important;
+  background-color: #fff !important;
+}
+.navbar-inverse .navbar-nav .nav-link {
+  color: #ed7633;
+}
+.navbar-inverse .navbar-nav .open > .nav-link, .navbar-inverse .navbar-nav .active > .nav-link, .navbar-inverse .navbar-nav .nav-link.open, .navbar-inverse .navbar-nav .nav-link.active {
+  color: red;
+}
+.navbar-inverse .navbar-nav .nav-link:hover {
+  color: red;
+}
+
+#product_title{
+  font-size: 1.2rem !important;
+}
+
+.fa {
+  font-size: 55px; }
+  
+#home-icons {
+  padding-top: 5rem !important;
+}
+
+
+  .why_index_go {
+    position: relative;
+    padding-top: 52px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+}
+.why_index_tb1 {
+  position: absolute;
+  top: -55px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+}
+.why_index_tb1 p {
+  width: 147px;
+  background-color: rgb(255, 255, 255);
+  margin: 0px auto;
+}
+.why_index_tb1 p span {
+  display: inline-block;
+  width: 104px;
+  height: 104px;
+  background: url(../images/w1.png) 0px 0px no-repeat rgb(255, 255, 255);
+  border-radius: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(4, 70, 134);
+  border-image: initial;
+  transition: all 0.5s ease 0s;
+}
+.why_index_go h5 {
+  font-size: 20px;
+  color: rgb(51, 51, 51);
+  font-family: opensans;
+  text-align: center;
+  margin-top: 30px;
+}
+.why_index_txt {
+  font-size: 16px;
+  color: rgb(101, 101, 101);
+  text-align: center;
+  line-height: 23px;
+  margin-top: 30px;
+}
+.why_index_more {
+  text-align: center;
+  margin-top: 37px;
+  padding-bottom: 20px;
+}
+.why_index_more a {
+  text-align: center;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-family: opensans;
+  width: 110px;
+  line-height: 31px;
+  background-color: rgb(4, 70, 134);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.5s ease 0s;
+}
+#home-heading {
+  position: relative;
+  min-height: 200px;
+  background: url("../image_home/lights.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff; }
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.title_bg {
+  padding-top: 27px;
+  min-height: 125px;
+  background: url(../img/title_bg.png) center top no-repeat;
+  margin: 0px auto;
+}
+#video-play {
+  position: relative;
+  min-height: 200px;
+  background: url("../image_home/media.jpg");
+  
+  background-position: 0 -300px;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff; }
+  #video-play a {
+    color: #fff; }
+
+
+
+#team img {
+  margin-top: -50px;
+}
+#team .fa {
+  font-size: 25px;
+}
+
+#team .card:hover, #team .card:hover .fa, #team .card:hover h5 {
+  color: white !important;
+  background-color: #0275d8;
+}
+
+#main-footer {
+  background: #000;
+  color: #fff; }
+
+#page-header1, #page-header2 {
+  height: 200px;
+
+  color: #fff;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px; }
+
+#page-header2 {
+    background: url("../img/bg1.jpg");
+    background-position: 0 200px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+#page-header1 {
+  background: url("../img/bg2.jpg");
+  background-position: 0 0px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+#about {
+  color: #292b2c !important;
+}
+#about p{
+  font-family: opensans;
+  font-size: 1.1rem;
+}
+#about h1{
+  font-weight: lighter;
+  font-size: 2.4rem;
+}
+#icon-boxes .about-cards {
+  margin-left: 4%;
+  margin-right: 4%;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  padding-top: 1.8rem;
+}
+#icon-boxes .about-cards p{
+  font-family: opensans;
+  font-size: 1.1rem;
+}
+#icon-boxes .about-cards{
+  color: #292b2c !important;
+  padding: 1em;
+}
+#icon-boxes .about-cards h3, #icon-boxes .about-cards h3{
+  font-weight: lighter;
+  font-size: 2.4rem;
+}
+#contact p{
+    font-family: opensans;
+    font-size: 1.1rem;
+  }
+#contact h3, #contact h4{
+  font-weight: lighter;
+  font-size: 2.4rem;
+}
+#faq.bg-dark {
+  background: #444;
+  color: #fff; }
+  #faq.bg-dark .card {
+    border: #444; }
+    #faq.bg-dark .card a {
+      color: #fff;
+      text-decoration: none; }
+  #faq.bg-dark .card-block, #faq.bg-dark .card-header {
+    background: #333; }
+
+.product-navlink:hover{
+  opacity: 50%;
+  cursor: pointer;
+}
+.info-card {
+  max-width: 100%;
+  right: 0px;
+  z-index: 100;
+  background-color: rgb(29, 29, 30);
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.4) 30px 30px 30px;
+  border-right: 0px;
+}
+
+.product-nav {
+    background-color: #363e3e!important;
+}
+#main-footer{
+  font-size: 0.875rem;
+  position: relative;
+  background: rgb(24, 26, 26);
+}
+footer hr{
+  border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) rgb(53, 56, 56) rgb(53, 56, 56);
+    border-image: initial;
+    margin: 20px 0px;
+}
+#electronics p, #medical_equipments p, #books p, #movies p{
+  margin: 0;
+}
+.list_title_b{
+  font-family: opensans;
+  font-size: 1.1rem;
+}
+.list_title_a{
+font-weight: lighter;
+font-size: 1.0rem;
+color: forestgreen;
+}
+
+#main-footer a{
+  font-family: opensans;
+  color: rgb(255, 255, 255);
+}
+#main-footer h3{
+  font-size: 25px;
+  font-family: opensans;
+  color: rgb(255, 255, 255);
+}
+#main-footer li{
+    list-style: none;
+    margin-left: -2.5em !important;
+    font-size: 14px !important;
+    color: rgb(120, 121, 123) !important;
+}
+
+#user_nav .nav-item.active {
+  border-left: none !important; 
+  color: #fff !important;
+}
+@media (min-width: 768px){
+  .why_index_txt {
+    padding: 0px 20px;
+  }
+}

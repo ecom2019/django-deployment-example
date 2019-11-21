@@ -1,0 +1,157 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- {% static '' %} -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+                                          
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.css" />
+  <link rel="stylesheet" href="{% static 'css_pro/style.css' %}">
+  <title>eCom</title>
+</head>
+
+<body>
+
+  <!-- top INFO SECTION -->
+  <section id="top_info" class="top_info py-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 align-self-center">
+          <p>eCom-Ethiopia Security CCTV IP Camera OEM Factory</p>
+        </div>
+        <div class="col-sm-6">
+          <p>
+              
+            <img src="{% static 'images_product/pobox1.png' %}" class="img-fluidx" alt="">sales@ecom.com 
+            <img src="{% static 'images_product/tel1.png' %}" class="img-fluidx" alt="">+86-755-29578877
+            <a href="#"><i class="fa fa-facebook pl-4"></i></a>
+            <a href="#"><i class="fa fa-twitter pl-4"></i></a>
+            <a href="#" style="color: white; font-weight: bolder;"><i class="fa fa-user pl-5 " ></i>Login</a>
+                
+                
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAVIGATION -->
+  <section id="top_info2" class="top_info py-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+              <a href="index.html" class="navbar-brand">
+                <img src="{% static 'images_product/logo.png' %}" class="img-fluidx" alt="">
+              </a>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="http://127.0.0.1:8000/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        PRODUCTS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{% url 'products:product_category' 'science' %}">SCIENCE</a>
+                      <a class="dropdown-item" href="{% url 'products:product_category' 'technology' %}">TECHNOLOGY</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'products:product_category' 'engineering' %}">ENGINEERING</a>
+                      <a class="dropdown-item" href="{% url 'products:product_category' 'mathematics' %}">MATHEMATICS</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'services' %}">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+                </li>
+
+
+              </ul>
+              <!--SEARCH FORM-->
+              <form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'products:product_search' %}">
+                <input class="form-control mr-sm-2" type="search" name='query' value="{{request.GET.q}}" placeholder="" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+
+            </div>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  {% block body %}
+  
+
+  {% endblock body %}	
+
+  <!-- HEADER SECTION -->
+  <header id="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+          <h1>Our Products</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, ea.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <footer id="main-footer" class="text-center p-4 py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <hr>
+          <p>Copyright 2019 &copy; eCom</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/jquery-3.3.1.slim.min.js' %} "></script>
+  <script src="{% static 'js/popper.min copy.js' %} "></script>
+  <script src="{% static 'js/bootstrap.min.js' %} "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.js"></script>
+  <script type="text/javascript" src="{% static 'js/slick.js' %} "></script>
+  <script src="{% static 'js/main.js' %} "></script>
+  <script>
+      $('.port-item').click(function () {
+        $('.collapse').collapse('hide');
+      });
+  
+      $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      });
+    </script>
+</body>
+
+</html>

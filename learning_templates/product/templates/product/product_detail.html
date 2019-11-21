@@ -1,0 +1,574 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!-- HOME HEADING SECTION -->
+<section id="home-heading" class="p-5">
+    <div class="dark-overlay">
+        <div class="row">
+            <div class="col">
+                <div class="container pt-5">
+                    <div class="title_bg">
+                        <h1>PRODUCT DETAIL REVIEWS</h1>
+                        <p class="hidden-sm-down">
+                            ENSTER ALL CCTV SECURITY PRODUCT INCLUDING CCTV CAMERA, SECURITY CAMERA, IP CAMERA,
+                            SURVEILLANCE SYSTEM,
+                            IP CAMERA,WIRELESS CAMERA ,DVR,NVR AND CCTV ACCESSORIES.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- READ DATABASE -->
+<main class="content">
+    <section class="centered">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{{object.image.url}}">
+                </div>
+                <div class="col-md-8">
+                    <div class="why_index_go" style="padding-top: 0px;">
+                        <h5>REVIEW </h5>
+                        <div class="why_index_txt">
+                            <P>With over 10 years manufacture &amp; export experiences , at present
+                                eCom win over 300 OEM client in the world .</P>
+                            <ul class="text-left">
+                                <li><span class="text-success" style="font-weight: bold !important;">TITLE :</span> {{object}}</li>
+                                <hr>
+                                <li><span class="text-success" style="font-weight: bold !important;">DESCRIPTION :</span> {{object.description}}</li>
+                                <hr>
+                                <li><span class="text-success" style="font-weight: bold !important;">CATEGORY :</span> {{object.category}}</li>
+                                <hr>
+                                <li><span class="text-success" style="font-weight: bold !important;">MANUFACTURER :</span> {{object.manufacturer}}</li>
+                                <hr>
+                                <li><span class="text-success" style="font-weight: bold !important;">REVIEW :</span>{{object.views_count}} Views</li>
+                            </ul>
+                        </div>
+                        <div class="text-center">
+                            <a href="{% url 'payment' %}">
+                                <button type="submit" class="btn btn-success btn-sn" value="Submit">
+                                    <i class="fa fa-cart-plus" style="font-size:20px;"></i>
+                                    ORDER
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+<!-- PRODUCT SPECIFICATION -->
+<section id="icon-boxes" class="p-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card about-cards  text-center text-white">
+                    <div class="card-block">
+                        <h3>DEETAILS</h3>
+                        <ul class="text-left">
+                            <li>Support Face Detection</li>
+                            <li>Support VGA, HDMI full HD output simultaneously;</li>
+                            <li>Support ONVIF; access third party；</li>
+                            <li>Support Web, CMS, center platform management software XMEYE, provide SDK development；
+                            </li>
+                            <li>Support various mobile monitoring (iPhone, Android)；</li>
+                            <li>Remote Access, With DNS (ARSP),easy to monitor remotely；</li>
+                        </ul>
+                        <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                Useful</cite></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card about-cards text-center text-white">
+                    <div class="card-block">
+                        <h3>SPECIFICATION</h3>
+                        <table border="1" cellpadding="0" cellspacing="1" class="MsoNormalTable"
+                            style="background:#A09D9D;border:1pt solid windowtext;width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td width="35%" td="" colspan="2" height="24"
+                                        style="border:1pt solid windowtext;background:transparent;">
+                                        <p align="left" class="MsoNormal" style="text-align:center;">
+                                            <b><span style="color:#FFFFFF;">Model No.</span></b>
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:transparent;">
+                                        <div align="center">
+                                            <span style="color:#FFFFFF;"><span
+                                                    style="font-weight:bold;"><span>NST-NVR7516P</span></span></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" style="border:1pt solid windowtext;background:#F3F3F3;" width="138">
+                                        <div align="center">
+                                            System
+                                        </div>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        Main processor
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <div align="center">
+                                            <p>
+                                                Hi3798M
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Operating system
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            Embedded LINUX operating system
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            System resource
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            Simultaneous multi-channel real-time recording, playback, network operation,
+                                            USB backup
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p align="center">
+                                            Interface
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Operation interface
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            16-bit true color graphic menu operation interface, support mouse operation
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Display screen
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            1/4/8/16/25
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="7" style="border:1pt solid windowtext;background:#F3F3F3;" width="138">
+                                        <div align="center">
+                                            Video
+                                        </div>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Video input (IP)
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            16*5MP/8*4K/25*1080P
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Video standards
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            <span
+                                                style="color:#000000;"><span>PAL(625TVL,50f/s)<span>；NTSC(525TVL,60f/s)</span></span></span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Video compression
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            H.265/H.264
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Display quality
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <div align="center">
+                                            <p align="center">
+                                                Max:4K
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Playback quality
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            4K/5MP/4M/3M/960P
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Decode
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <div align="center">
+                                            <p>
+                                                1*4K/2*5M/4*1080P
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Motion detection
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <div style="text-align:center;">
+                                            <p>
+                                                Depend on camera
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" style="border:1pt solid windowtext;background:#F3F3F3;" width="138">
+                                        <p align="center">
+                                            Audio
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Audio compression
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <div align="center">
+                                            <p>
+                                                G711A
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            intercom
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <div align="center">
+                                            <p>
+                                                Unsupport
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" style="border:1pt solid windowtext;background:#F3F3F3;" width="138">
+                                        <p align="center">
+                                            Record and playback
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Record mode
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <div align="center">
+                                            <p>
+                                                Manual&gt;Alarm&gt;Video Detection&gt;Continuous
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Local playback
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <div align="center">
+                                            <p>
+                                                <span
+                                                    style="text-align:-webkit-center;white-space:normal;background-color:#FFFFFF;">1*4K/2*5M/4*1080P</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Search mode
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <div align="center">
+                                            <p>
+                                                search by Time/calendar/event/channel
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" style="border:1pt solid windowtext;background:#F3F3F3;" width="138">
+                                        <p align="center">
+                                            Storage and back up
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Record Storage
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <div align="center">
+                                            <p>
+                                                HDD 、 network
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Backup mode
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            Network backup, USB hard disk, USB burner, SATA burner
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="6" style="border:1pt solid windowtext;background:#F3F3F3;" width="138">
+                                        <p align="center">
+                                            Interface
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Video output
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            1ch HDMI HD Output ,1CH VGA Output
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Audio I/O
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            0/ 0
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Alarm I/O
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;" width="1087">
+                                        <p align="center">
+                                            0/0
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Network interface
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;" width="1087">
+                                        <p align="center">
+                                            <span style="color:#000000;"><span>1*SFP Port, 2*&nbsp;100M/1000M Adaptive
+                                                    Ethernet port,16 POE Output ports</span></span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            USB interface
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            2*USB2.0 port
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;" width="151">
+                                        <p>
+                                            Hard disk
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            2*SATA &nbsp;(Up to 8TB for each disk)
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="7" style="border:1pt solid windowtext;background:#F3F3F3;" width="138">
+                                        <p align="center">
+                                            other
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            PTZ control
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            Control PTZ device by network
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            ONVIF
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            Available
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Power supply
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            48V /3 A
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Power Consumption
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            &lt;10W(Without HDD)
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Work environment
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            Temperature:0℃- ＋ 55℃ , Humidity:10% － 90%RH , Atm:86kpa － 106kp
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Dimension
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            L440*W320*H45MM
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1pt solid windowtext;background:#F3F3F3;">
+                                        <p>
+                                            Weight
+                                        </p>
+                                    </td>
+                                    <td style="border:1pt solid windowtext;background:white;">
+                                        <p align="center">
+                                            3.2KG
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                Useful</cite></small>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock body %}

@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<header id="page-header1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <h1>Order Our Product</h1>
+        <p>Already have an account?</p>
+        <!--submit-->
+        <div class="row">
+            <div class="col-md-12">
+              <input type="submit" class="btn btn-primary" value="Sign In" style="background-color: rgb(130, 180, 64);
+              border: none;">
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container #contact">
+
+  <section id="contact" class="p-5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="card p-4">
+            <div class="card-block">
+              <h3 class="text-left">Create Account</h3>
+              <hr>
+              <p class="text-muted">Sign up to ecom to get started.</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="First Name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Last Name">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Phone Number">
+                  </div>
+                </div>
+              </div>
+
+              <hr>
+
+              <!---Reference Number/Recomendation-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="UniqeId">Uniqe Reference / Recomendation ID</label>
+                    <input type="text" name=UniqeId class="form-control" placeholder="Unique ID">
+                  </div>
+                </div>
+              </div>
+
+              <hr>
+
+              <!--submit-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Message"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!--submit-->
+              <div class="row">
+                <div class="col-md-12">
+                  <input type="submit" class="btn btn-primary" value="SUBMIT" style="background-color: rgb(130, 180, 64);
+                  border: none;">
+                </div>
+              </div>
+
+              <!---->
+              <p class="text-muted"><small>We will send you a link to access your accout and order the product!!</small>
+              </p>
+              <div class="form-group">
+                <div class="e-form__input">
+                  <input name="" type="hidden" value="0"><input class=""
+                    data-error="{&quot;required&quot;:&quot;You must agree to the privacy policy to continue&quot;}"
+                    type="checkbox" value="1" name="sign_up_form[privacy_agreement]"
+                    id="sign_up_form_privacy_agreement">
+                  <label class="text-muted" for="sign_up_form_privacy_agreement">I agree to the <a target="_blank"
+                      href="https://ecom.com/privacy">Privacy Policy</a></label>
+                </div>
+              </div>
+              <div class="e-form__group">
+                <div class="e-form__input">
+                  <input name="sign_up_form[terms_agreement]" type="hidden" value="0">
+                  <input class="js-sign-up__terms" data-error="{&quot;required&quot;:&quot;You must agree to the terms and conditions to continue&quot;}"
+                    type="checkbox" value="1" name="sign_up_form[terms_agreement]" id="sign_up_form_terms_agreement">
+                  <label class="text-muted" for="sign_up_form_terms_agreement">I agree to the <a target="_blank"
+                      href="/legal/market">Terms and Conditions</a></label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card p-4">
+            <div class="card-block">
+              <h4>Billing Detail</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <hr>
+              <h4>Select Payment Method</h4>
+              <p>PayPal</p>
+              <p>Paioneer</p>
+              <p>Credit Card</p>
+              <hr>
+              <h4>Order Summary</h4>
+              <p>Product : price</p>
+              <p>Handling Fee : price</p>
+              <hr>
+              <h4>Total : Cost</h4>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+</div>
+
+{% endblock body %}

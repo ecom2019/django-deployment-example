@@ -1,0 +1,54 @@
+{% extends 'product/base.html' %}
+{% load static %}
+{% block body %}
+
+    <main class="contnet">
+        <!--PRODUCT BY CATEGORY-->
+        <h3>Product </h3>
+        <h3>Products / {{ product_category | title}} </h3>
+        {% if product_category %}
+        
+            <h3>Products / {{ product_category | title}} </h3>
+            {% for product in object_list %}
+                <div class="port-item p-4 ">
+                    <a href="">
+                        <img class="product_image" src="{{product.image.url}}">
+                        <h2 id="product_title" class="product_title display-4">{{product.title}}</h2>
+                    </a>
+                </div>
+            {% endfor %}
+
+        {% endif %}
+
+        <!--PRODUCT BY LANGUAGE-->
+        {% if product_language %}
+            <h3>Product / {{ product_language | title}} </h3>
+            {% for product in object_list %}
+                <div class="port-item p-4 ">
+                    <a href="">
+                        <img class="product_image" src="{{product.image.url}}">
+                        <h2 id="product_title" class="product_title display-4">{{product.title}}</h2>
+                    </a>
+                </div>
+            {% endfor %}
+
+        {% endif %}
+
+        <!--PRODUCT search-->
+        {% if product_search %}
+            <h3>Product / {{ product_language | title}} </h3>
+            {% for product in object_list %}
+                <div class="port-item p-4 ">
+                    <a href="">
+                        <img class="product_image" src="{{product.image.url}}">
+                        <h2 id="product_title" class="product_title display-4">{{product.title}}</h2>
+                    </a>
+                </div>
+            {% endfor %}
+
+        {% endif %}
+
+    </main>
+
+
+{% endblock body %}

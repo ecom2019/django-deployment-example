@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <!--Header-->
+    <header id="page-header1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center">
+                    <h1>MANAGE YOUR ACCOUNT</h1>
+                    <p>Sign up to get started | Already have an account? Sign in</p>
+
+                    <!--USER ACCOUNT NAV-->
+                    <nav id="user_nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+                        <!--
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        -->
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <ul class="navbar-nav ml-auto" >
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'home' %}">MY ACCOUNT <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                {% if user.is_authenticated %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'edit_profile' %}">Edit Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'change_password' %}">Change Password</a>
+                                    </li>
+                                {% else %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'register' %}">New Account</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'register' %}">Forget Password</a>
+                                    </li>
+                                {% endif %}
+
+                            </ul>
+
+                        </div>
+                    </nav>
+
+
+
+
+
+                    <!--END USER ACCOUNT NAV-->
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    {% if user.is_authenticated %}
+
+        <!-- user is login-->
+        <section id="icon-boxes" class="p-5">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="card text-center about-cards text-white">
+                            <div class="card-block">
+                                <i class="fa fa-clock-o"></i>
+                                <h3>User Image</h3>
+
+                                <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                        Useful</cite></small>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card about-cards text-center text-white">
+                            <div class="card-block">
+                                <i class="fa fa-clock-o"></i>
+                                <h3>User Info</h3>
+                                <p>Name: {{ user.first_name }}</p>
+                                <p>Username: {{ user.username }}</p>
+                                <p>Email: {{ user.email }}</p>
+                                <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                        Useful</cite></small>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card about-cards text-center text-white">
+                            <div class="card-block">
+                                <i class="fa fa-clock-o"></i>
+                                <h3>USER STATUSE</h3>
+                                <img src="/static/images_auth/t3.jpg" alt="" class="img-fluid py-2 ">
+                                <img src="/static/images_auth/t2.jpg" alt="" class="img-fluid py-2 ">
+                                <img src="/static/images_auth/t1.jpg" alt="" class="img-fluid py-2 ">
+                                <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                        Useful</cite>
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    {% else %}
+
+        <!-- user is logged out or not registered-->
+        <section id="newsletter" class="text-center p-5 bg-inverse text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1>Secure Checkout</h1>
+                        <p>if you get registered you will get lots advantages</p>
+                        <form class="form-inline justify-content-center">
+                            <label class="sr-only" for="name">Name</label>
+                            
+                                <button class="btn btn-primary ml-4" type="submit" style="width: 10%;">
+                                    <a href="{% url 'register'%}" style="width: 10rem;color: white;">Sign Up</a>
+                                </button>
+                            
+                            
+                                <button class="btn btn-primary ml-4" type="submit" style="width: 10rem;">
+                                    <a href="{% url 'login'%}" style="width: 10%; color: white;">Login</a>
+                                </button>
+                            
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="icon-boxes" class="p-5">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="card about-cards  text-center text-white">
+                            <div class="card-block">
+                                <i class="fa fa-clock-o"></i>
+                                <h3>1</h3>
+                                <p>We offer 24/7 online service Once order placed, daily update service will be offered
+                                    per
+                                    each
+                                    24 hours</p>
+                                <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                        Useful</cite></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card about-cards text-center text-white">
+                            <div class="card-block">
+                                <i class="fa fa-clock-o"></i>
+                                <h3>2</h3>
+                                <p>We offer 24/7 online service Once order placed, daily update service will be offered
+                                    per
+                                    each
+                                    24 hours</p>
+                                <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                        Useful</cite></small>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card about-cards  text-center text-white">
+                            <div class="card-block">
+                                <i class="fa fa-clock-o"></i>
+                                <h3>3</h3>
+                                <p>We offer 24/7 online service Once order placed, daily update service will be offered
+                                    per
+                                    each
+                                    24 hours.</p>
+                                <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                        Useful</cite></small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+    {% endif %}
+    
+
+    <!--USER LANDING PAGE CONTENT-->
+    <section id="icon-boxes" class="p-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card about-cards  text-center text-white">
+                        <div class="card-block">
+                                <img src="/static/images_auth/t3.jpg" alt="" class="img-fluid py-2 ">
+                            <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                    Useful</cite></small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card about-cards text-center text-white">
+                        <div class="card-block">
+                            <img src="/static/images_auth/t2.jpg" alt="" class="img-fluid py-2 ">
+                            <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                    Useful</cite></small>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card about-cards  text-center text-white">
+                        <div class="card-block">
+                            <img src="/static/images_auth/t1.jpg" alt="" class="img-fluid py-2 ">
+                            <small class="text-muted">Dolorem rem eius ipsam quo <cite title="Source Title">Somethin
+                                    Useful</cite></small>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+    <!--------------------------------------->
+
+
+{% endblock body %}
