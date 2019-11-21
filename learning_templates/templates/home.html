@@ -401,62 +401,6 @@
     </div>
 </section>
 
-<div class="container">
-    <div class="row">
-        {% for product in object_list %}
-        {% if product.status == 'TR' %}
-        <div class="card-deck col-md-3 my-2">
-            <div class="card">
-                <div class="card-block">
-                    <p class="card-text text-center">
-                        <img class="product_image" src="{{product.image.url}}">
-                    </p>
-                    <P class="card-title text-left">
-                        <span class=list_title_a>TITLE : </span> 
-                        <span class=list_title_b>{{product.title}}</span> 
-                    </P>
-                    <P class="card-title text-left">
-                        <span class=list_title_a>CATEGORY : </span> 
-                        <span class=list_title_b>{{product.category}}</span> 
-                    </P>
-                    <P class="card-title text-left">
-                        <span class=list_title_a>ID : </span> 
-                        <span class=list_title_b>{{product.id}}</span> </P>
-                    <P class="card-title text-left">
-                        <span class=list_title_a>PRODUCT DETAIL : </span>
-                        <span class=list_title_b> <a href="{% url 'products:product_detail' product.id %}">Link</a> </span>
-                    </P>
-                    <P class="card-title text-left">
-                        <span class=list_title_a>PRODUCER : </span>
-                        <span class=list_title_b text-muted>{{product.manufacturer}}</span>
-                    </P>
-                    <P class="card-title text-left">
-                        <span class=list_title_a>PRODUCTS VIEW : </span>
-                        <span class=list_title_b text-muted>{{product.views_count}}</span>
-                    </P>
-                    <P class="card-title text-left">
-                        <span class=list_title_a>PRICE : </span>
-                        <span class=list_title_b text-muted>{{product.price}}</span>
-                    </P>
-                </div>
-
-                <div class="card-footer">
-                    <a href="{% url 'payment' %}">
-                        <button type="submit" class="btn btn-success btn-sn" value="Submit">
-                            <i class="fa fa-cart-plus" style="font-size:20px;"></i>
-                            ORDER
-                        </button>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-
-</div>
-
 <!-- VIDEO PLAY SECTION -->
 <section id="video-play">
     <div class="dark-overlay">
